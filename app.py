@@ -27,21 +27,18 @@ def index():
         search_query = request.form.get('search', '').strip()
         search_section = request.form.get('search_section', '').strip()
 
-        query = """
-            SELECT * FROM burials
-            WHERE (LOWER(name) LIKE LOWER(?) OR LOWER(lot) LIKE LOWER(?))
-            AND LOWER(section) LIKE LOWER(?)
-        """
-        search_term_general = f'%{search_query}%'
-        search_term_section = f'%{search_section}%'
+        query = "SELECT * FROM burials WHERE 1=1"
+        params = []
 
-        if not search_section:
-            search_term_section = '%'
+        if search_query:
+            query += " AND (LOWER(name) LIKE LOWER(?) OR LOWER(lot) LIKE LOWER(?))"
+            params.extend([f'%{search_query}%', f'%{search_query}%'])
 
-        if not search_query:
-            search_term_general = '%'
+        if search_section:
+            query += " AND LOWER(section) LIKE LOWER(?)"
+            params.append(f'%{search_section}%')
 
-        burials = conn.execute(query, (search_term_general, search_term_general, search_term_section)).fetchall()
+        burials = conn.execute(query, params).fetchall()
     else:
         burials = conn.execute('SELECT * FROM burials LIMIT 100').fetchall()
 
@@ -96,3 +93,8 @@ def add_burial():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
+
+
+
+
