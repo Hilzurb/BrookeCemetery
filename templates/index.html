@@ -11,7 +11,8 @@
     <a href="{{ url_for('admin') }}">Admin - Add Burial</a><br><br>
 
     <form method="POST">
-        <input type="text" name="search" placeholder="Search by Name or Lot" value="{{ search_query }}">
+        <input type="text" name="search_name" placeholder="Search by Name" value="{{ search_name }}">
+        <input type="text" name="search_lot" placeholder="Search by Lot" value="{{ search_lot }}">
         <input type="text" name="search_section" placeholder="Search by Section" value="{{ search_section }}">
         <button type="submit">Search</button>
     </form>
@@ -21,6 +22,7 @@
             <th>Name</th>
             <th>Section</th>
             <th>Lot</th>
+            <th>Stone</th>
             <th>Date of Birth</th>
             <th>Date of Death</th>
         </tr>
@@ -29,6 +31,7 @@
             <td>{{ burial['name'] }}</td>
             <td>{{ burial['section'] }}</td>
             <td>{{ burial['lot'] }}</td>
+            <td>{{ burial['stone'] }}</td>
             <td>{{ burial['dob'] }}</td>
             <td>{{ burial['dod'] }}</td>
         </tr>

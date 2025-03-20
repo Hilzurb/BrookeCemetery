@@ -20,30 +20,32 @@ def index():
 
     conn = get_db_connection()
     burials = []
-    search_query = ''
-    search_section = ''
+    search_name = request.form.get('search_name', '').strip()
+    search_section = request.form.get('search_section', '').strip()
+    search_lot = request.form.get('search_lot', '').strip()
+
+    query = "SELECT * FROM burials WHERE 1=1"
+    params = []
+
+    if search_name:
+        query += " AND LOWER(name) LIKE LOWER(?)"
+        params.append(f'%{search_name}%')
+
+    if search_section:
+        query += " AND LOWER(section) = LOWER(?)"
+        params.append(search_section)
+
+    if search_lot:
+        query += " AND LOWER(lot) = LOWER(?)"
+        params.append(search_lot)
 
     if request.method == 'POST':
-        search_query = request.form.get('search', '').strip()
-        search_section = request.form.get('search_section', '').strip()
-
-        query = "SELECT * FROM burials WHERE 1=1"
-        params = []
-
-        if search_query:
-            query += " AND (LOWER(name) LIKE LOWER(?) OR LOWER(lot) LIKE LOWER(?))"
-            params.extend([f'%{search_query}%', f'%{search_query}%'])
-
-        if search_section:
-            query += " AND LOWER(section) LIKE LOWER(?)"
-            params.append(f'%{search_section}%')
-
         burials = conn.execute(query, params).fetchall()
     else:
         burials = conn.execute('SELECT * FROM burials LIMIT 100').fetchall()
 
     conn.close()
-    return render_template('index.html', burials=burials, search_query=search_query, search_section=search_section)
+    return render_template('index.html', burials=burials, search_name=search_name, search_section=search_section, search_lot=search_lot)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
