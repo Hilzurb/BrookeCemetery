@@ -6,7 +6,7 @@ app.secret_key = 'your_secret_key'  # Set your secure secret key!
 
 DATABASE = 'database.db'
 ADMIN_USERNAME = 'admin'
-ADMIN_PASSWORD = 'Brooke'  # Set your own password!
+ADMIN_PASSWORD = 'password'  # Set your own password!
 
 def get_db_connection():
     conn = sqlite3.connect(DATABASE)
@@ -81,7 +81,6 @@ def add_burial():
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
-    if __name__ == '__main__':
     app.run(debug=False)
+
 
