@@ -11,7 +11,8 @@
     <a href="{{ url_for('admin') }}">Admin - Add Burial</a><br><br>
 
     <form method="POST">
-        <input type="text" name="search" placeholder="Search by Name, Section, or Lot" value="{{ search_query }}">
+        <input type="text" name="search" placeholder="Search by Name or Lot" value="{{ search_query }}">
+        <input type="text" name="search_section" placeholder="Search by Section" value="{{ search_section }}">
         <button type="submit">Search</button>
     </form>
 
