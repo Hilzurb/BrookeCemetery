@@ -59,3 +59,26 @@ button {
 button:hover {
     background-color: #006a71;
 }
+/* Make site responsive and mobile-friendly */
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
