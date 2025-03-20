@@ -1,9 +1,20 @@
-Cemetery App Login
-{% if error %}
-{{ error }}
-{% endif %}
-Username:
-
-Password:
-
-Login
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Cemetery App Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Cemetery App Login</h2>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>Username:</label>
+        <input type="text" name="username"><br>
+        <label>Password:</label>
+        <input type="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
