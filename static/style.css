@@ -61,13 +61,16 @@ th {
         padding: 5px;
     }
     h1, h2 {
-        font-size: 22px;
+        font-size: 26px;
     }
     table {
-        font-size: 12px;
+        font-size: 16px;
+    }
+    th, td {
+        padding: 12px;
     }
     input[type="text"], button {
-        font-size: 20px;
-        padding: 14px;
+        font-size: 22px;
+        padding: 16px;
     }
 }
