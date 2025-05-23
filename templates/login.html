@@ -1,20 +1,61 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-    <title>Cemetery App Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
 </head>
 <body>
-    <h2>Cemetery App Login</h2>
-    {% if error %}
-        <p style="color:red;">{{ error }}</p>
-    {% endif %}
-    <form method="POST">
-        <label>Username:</label>
-        <input type="text" name="username"><br>
-        <label>Password:</label>
-        <input type="password" name="password"><br><br>
-        <button type="submit">Login</button>
-    </form>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;!DOCTYPE html&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;html lang="en"&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>&lt;head&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;title&gt;Cemetery App Login&lt;/title&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">  </span>&lt;style&gt;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>body {</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 20px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background-color: #f8f9fa;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-direction: column;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>align-items: center;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>h2 {</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>margin-bottom: 20px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>form {</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>width: 100%;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>max-width: 400px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background: white;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 20px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>border-radius: 8px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>display: flex;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>flex-direction: column;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>gap: 15px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>input[type="text"],</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>input[type="password"] {</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 10px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 16px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>width: 100%;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>box-sizing: border-box;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>}</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000; min-height: 23.0px"><span class="s1"><b></b></span><br></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">    </span>input[type="submit"] {</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>padding: 10px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>font-size: 16px;</b></span></h2>
+<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b><span class="Apple-converted-space">      </span>background-color: #4CAF50;</b></span></h2>
+<p class="p3"><span class="s1"></span><br></p>
 </body>
 </html>
